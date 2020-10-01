@@ -49,6 +49,12 @@
     color: $grayDark2;
     margin-bottom: 28px;
 
+    @media screen and (max-width: $smDesktopWidthD) {
+      & br {
+        display: none;
+      }
+    }
+
     @media screen and (min-width: $smDesktopWidth) {
       font-size: 42px;
       line-height: 48px;
@@ -73,6 +79,7 @@
     box-sizing: border-box;
     border-radius: 0px;
     line-height: 46px;
+    transition: background .3s linear;
 
     @media screen and (max-width: $tableWidthD) {
       width: 100%;
@@ -83,6 +90,12 @@
     @media screen and (min-width: $tableWidth) {
       margin-right: 20px;
       flex-grow: 1;
+    }
+
+
+    &:hover {
+      background-color: #f9f9f9;
+      transition: background .3s linear;
     }
   }
 

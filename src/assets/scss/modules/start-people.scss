@@ -5,14 +5,16 @@
   overflow: hidden;
 
   &__container {
-    padding-top: 127px;
-    padding-bottom: 261px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     @media screen and (min-width: $smDesktopWidth) {
       background-image: url('../img/bg-start-people-table.svg');
       background-repeat: no-repeat;
       background-position: 100% 27.4%;
       background-size: 50%;
+      padding-top: 127px;
+      padding-bottom: 261px;
     }
 
     @media screen and (min-width: $desktopWidth) {

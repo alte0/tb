@@ -1,8 +1,13 @@
 .clients {
-  padding-top: 75px;
-  padding-bottom: 114px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   position: relative;
   overflow: hidden;
+
+  @media screen and (min-width: $smDesktopWidth) {
+    padding-top: 75px;
+    padding-bottom: 114px;
+  }
 
   &__container {
     position: relative;
@@ -33,7 +38,7 @@
       width: 50%;
     }
   }
-  // &__left {}
+
   &__right {
     @media screen and (min-width: $tableWidth) {
       padding-left: 16px;

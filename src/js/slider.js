@@ -1,9 +1,9 @@
 import Swiper from 'swiper/bundle';
 
 new Swiper('.clients__slider', {
-  // autoplay: {
-  //   delay: 3000,
-  // },
+  autoplay: {
+    delay: 4000,
+  },
   loop: true,
 
   // If we need pagination
