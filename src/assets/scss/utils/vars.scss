@@ -8,35 +8,20 @@ $mainFontWeight          : 400;
 $mainLineHeight          : 1.5;
 
 $desktopXWidth            : 1440px;
+$desktopXWidthD            : 1339px;
 $desktopWidth            : 1280px;
+$desktopWidthD            : 1279px;
 $smDesktopWidth          : 980px;
+$smDesktopWidthD          : 979px;
 $tableWidth              : 768px;
+$tableWidthD              : 767px;
 $phoneWidth              : 480px;
+$phoneWidthD              : 479px;
 $smPhoneWidth            : 320px;
-
-// Main color
-// $default-color           : #ffffff;
-// $primary-color           : #444ce0;
-// $success-color           : #26de81;
-// $danger-color            : #fc5c65;
-// $warning-color           : #fed330;
-// $light-color             : #999999;
-// $purple-color            : #8854d0;
-
-// // Neutral Color
-// $neutral-primary         : #303133;
-// $neutral-regular         : #606266;
-// $neutral-secondary       : #909399;
-// $neutral-placeholder     : #C0C4CC;
-
-// // Border Color
-// $border-base             : #DCDFE6;
-// $border-light            : #E4E7ED;
-// $border-lighter          : #EBEEF5;
-// $border-lightex          : #F2F6FC;
 
 $black: #000;
 $white: #fff;
+$whiteDark: #f5f5f5;
 $grayMenu: #292933;
 $grayDesc: rgba(41, 41, 51, 0.8);
 $grayBtn: #848484;

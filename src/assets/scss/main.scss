@@ -10,15 +10,6 @@ html {
   font-size: $mainFontSize;
   color: $mainFontColor;
   height: 100%;
-  @media screen and (max-width: $desktopWidth) {
-    font-size: 16px;
-  }
-  @media screen and (max-width: $tableWidth) {
-    font-size: 15px;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    font-size: 14px;
-  }
 }
 
 body {
@@ -83,19 +74,10 @@ section, .section {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  min-width: $smPhoneWidth;
   max-width: $desktopXWidth;
 
-  //@media screen and (max-width: $smDesktopWidth) {
-  //  max-width: tableWidth;
-  //}
-  //@media screen and (max-width: $tableWidth) {
-  //  max-width: phoneWidth;
-  //}
-  //@media screen and (max-width: $phoneWidth) {
-  //  max-width: smPhoneWidth;
-  //}
   @media screen and (min-width: $desktopXWidth) {
-    //max-width: smPhoneWidth;
     padding-left: 135px;
     padding-right: 135px;
   }

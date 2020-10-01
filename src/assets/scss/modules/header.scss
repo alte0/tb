@@ -2,6 +2,10 @@
   padding-top: 13px;
   padding-bottom: 13px;
 
+  @media screen and (max-width: $smDesktopWidthD) {
+    text-align: center;
+  }
+
   &__container {
     @media screen and (min-width: $desktopWidth) {
       display: flex;
@@ -39,6 +43,7 @@
 
   &__tel {
     color: $black;
+    display: inline-block;
     font-weight: 800;
     font-size: 13px;
     line-height: 16px;
@@ -47,9 +52,19 @@
   }
 
   &__btn-group {
-    display: flex;
-    justify-content: space-between;
-    max-width: 326px;
-    width: 100%;
+    @media screen and (min-width: $smDesktopWidth) {
+      display: flex;
+      justify-content: space-between;
+      max-width: 326px;
+      width: 100%;
+    }
+  }
+
+  &__logo-link,
+  &__nav,
+  &__tel {
+    @media screen and (max-width: $smDesktopWidthD) {
+      margin-bottom: 30px;
+    }
   }
 }
