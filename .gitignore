@@ -5,6 +5,8 @@
 
 # Node
 node_modules
+node_modules L
+node_modules W
 
 # Dist & test
 test
