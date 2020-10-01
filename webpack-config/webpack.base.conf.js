@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const BeautifyHtmlWebpackPlugin = require('beautify-html-webpack-plugin')
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin')
-const SpritesmithPlugin = require('webpack-spritesmith')
+// const SpritesmithPlugin = require('webpack-spritesmith')
 const WebpackHtmlValidatePlugin = require('webpack-html-validate-plugin')
 
 // Main const
@@ -164,23 +164,19 @@ module.exports = {
       "e4x": true,
       "indent_empty_lines": false
     }),
-    new SpritesmithPlugin({
-      src: {
-        // cwd: path.resolve(__dirname, 'src/ico'),
-        cwd: `${PATHS.src}/sprites-png`,
-        glob: '*.png'
-      },
-      target: {
-        // image: path.resolve(__dirname, 'src/spritesmith-generated/sprite.png'),
-        image: `${PATHS.dist}/assets/sprite/sprite.png`,
-        // css: path.resolve(__dirname, 'src/spritesmith-generated/sprite.styl')
-        css: `${PATHS.src}/assets/scss/sprite/sprite.scss`
-      },
-      apiOptions: {
-        // cssImageRef: "~sprite.png"
-        cssImageRef: '../sprite/sprite.png'
-      }
-    }),
+    // new SpritesmithPlugin({
+    //   src: {
+    //     cwd: `${PATHS.src}/sprites-png`,
+    //     glob: '*.png'
+    //   },
+    //   target: {
+    //     image: `${PATHS.dist}/assets/sprite/sprite.png`,
+    //     css: `${PATHS.src}/assets/scss/sprite/sprite.scss`
+    //   },
+    //   apiOptions: {
+    //     cssImageRef: '../sprite/sprite.png'
+    //   }
+    // }),
     new WebpackHtmlValidatePlugin()
   ],
 }
