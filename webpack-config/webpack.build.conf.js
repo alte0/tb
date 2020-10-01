@@ -8,7 +8,7 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
   plugins: [
     new FaviconsWebpackPlugin({
       // Your source logo (required)
-      logo: './src/favicon-build.svg',
+      logo: './src/favicon-build.png',
       // Favicon generation mode which is used if webpack is in `production` mode
       // Can be set to:
       // `webapp` (Slow but production ready favicon geneation)
