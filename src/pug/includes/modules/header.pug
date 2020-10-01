@@ -1,0 +1,17 @@
+- const menuList = ['Почему Teachbase', 'Решения', 'Тарифы', 'Журнал', 'Библиотека курсов']
++b('header').header
+  +e.container(class="container")
+    +e('a').logo-link
+      +e('img').logo(src="assets/img/logo.png" width="163" height="32" alt="Лого TechBase")
+    +e('nav').nav
+      +b('ul').menu-list(class="header__menu")
+        each value, index in menuList
+          +e('li').item
+            +e('a').link(href="#")= value
+    <!-- end nav --!>
+
+    +e('a').tel(href="tel:+74956603843") +7 (495) 660-38-43
+
+    +e.btn-group
+      +b('a')(href="#").btn.--orange Попробовать демо
+      +b('a')(href="#").btn.--transparent Войти

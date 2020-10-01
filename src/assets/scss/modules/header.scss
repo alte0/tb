@@ -1,0 +1,39 @@
+.header {
+  padding-top: 13px;
+  padding-bottom: 13px;
+
+  &__container {
+    @media screen and (min-width: $desktopWidth) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+  }
+
+  &__logo-link {
+    line-height: 0;
+  }
+
+  &__menu {
+    @media screen and (min-width: $desktopWidth) {
+      display: flex;
+      // justify-content: space-between;
+    }
+  }
+
+  &__tel {
+    color: $black;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  &__btn-group {
+    display: flex;
+    justify-content: space-between;
+    max-width: 330px;
+    width: 100%;
+  }
+}

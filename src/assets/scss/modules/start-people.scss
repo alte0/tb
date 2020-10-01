@@ -1,0 +1,43 @@
+.start-people {
+  background-image: url('../img/bg-start-people-circle.svg');
+  background-repeat: no-repeat;
+  background-position: 100% 45.5%;
+  padding-top: 77px;
+  padding-bottom: 211px;
+
+  &__container {
+    background-image: url('../img/bg-start-people-table.svg');
+    background-repeat: no-repeat;
+    background-position: 86.9% 34%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &__title,
+  &__desc,
+  &__btn-group {
+    max-width: 472px;
+    width: 100%;
+  }
+
+  &__title {
+    color: $grayDark;
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 62px;
+    margin-bottom: 29px;
+  }
+
+  &__desc {
+    margin-top: 0;
+    margin-bottom: 49px;
+  }
+
+  &__btn-group .btn {
+    margin-right: 22px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

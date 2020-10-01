@@ -1,0 +1,31 @@
+.btn {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 11.59px 30px 12.48px;
+  line-height: 17px;
+
+  &--transparent {
+    color: $black;
+    font-size: 14px;
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.3));
+  }
+
+  &--orange {
+    background: linear-gradient(180deg, #F88858 0%, #F1AD8F 0.01%, rgba(255, 97, 47, 0.71) 100%);
+    box-shadow: 0px 0px 5px 0 rgba(160, 160, 160, 0.9);
+    color: $white;
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+
+  &--white {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 15px #D6D6D6;
+    color: $grayBtn;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
