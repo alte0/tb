@@ -9,9 +9,7 @@
         +e('ul').list
             each val, index in list
               +e('li').list-item
-                span.visually-hidden= val
-                svg(width="137" height="73")
-                  use(xlink:href="#sprite-clients-" + (index + 1) )
+                img(src="assets/img/clients/clients-" + (index + 1) + ".png", width="137" height="73" alt=val)
       +e.right
         +e.slider(class="swiper-container")
           .swiper-wrapper
