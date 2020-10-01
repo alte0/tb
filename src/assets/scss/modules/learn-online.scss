@@ -1,0 +1,70 @@
+.learn-online {
+  background-image: url('../img/bg-learn-online.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 136px;
+  padding-bottom: 383px;
+  position: relative;
+  margin-bottom: -35px;
+
+  @media screen and (min-width: $desktopWidth) {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 34%;
+      background-image: url('../img/bg-shadow-book.svg');
+      background-repeat: no-repeat;
+      width: 384px;
+      height: 42px;
+      transform: translateX(-130%);
+    }
+  }
+
+
+  &__container {
+    @media screen and (min-width: $desktopXWidth) {
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+  }
+
+  &__title,
+  &__desc,
+  &__form {
+    margin-left: 48.3%;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 48px;
+    color: $grayDark2;
+    margin-bottom: 28px;
+  }
+
+  &__desc {
+    margin-top: 0;
+    margin-bottom: 41px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    background: #FFFFFF;
+    border: 1px solid #C7C7C7;
+    box-sizing: border-box;
+    border-radius: 0px;
+    flex-grow: 1;
+    line-height: 46px;
+    margin-right: 20px;
+  }
+
+  &__btn {
+    padding-left: 84px;
+    padding-right: 84px;
+  }
+}

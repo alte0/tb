@@ -1,6 +1,8 @@
 .btn {
   display: inline-block;
   border-radius: 10px;
+  border: none;
+  cursor: pointer;
   padding: 11.59px 30px 12.48px;
   line-height: 17px;
 
@@ -27,5 +29,7 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 22px;
+    padding-left: 51px;
+    padding-right: 51px;
   }
 }

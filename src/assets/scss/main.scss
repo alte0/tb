@@ -45,16 +45,7 @@ ul, li {
 
 section, .section {
   position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
-  }
+  z-index: 0;
 }
 
 .svg-inline {
@@ -116,3 +107,5 @@ section, .section {
 @import "modules/menu-list.scss";
 @import "modules/btn.scss";
 @import "modules/start-people.scss";
+@import "modules/learn-online.scss";
+@import "modules/clients.scss";

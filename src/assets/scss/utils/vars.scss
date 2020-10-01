@@ -2,10 +2,10 @@
 $mainFont                : 'Montserrat', 'Helvetica', 'Arial', sans-serif;
 
 // Size
-$mainFontColor           : rgba(41, 41, 51, 0.8);
+$mainFontColor           : #292933;
 $mainFontSize            : 16px;
 $mainFontWeight          : 400;
-$mainLineHeight          : 1.875;
+$mainLineHeight          : 1.5;
 
 $desktopXWidth            : 1440px;
 $desktopWidth            : 1280px;
@@ -38,5 +38,9 @@ $smPhoneWidth            : 320px;
 $black: #000;
 $white: #fff;
 $grayMenu: #292933;
+$grayDesc: rgba(41, 41, 51, 0.8);
 $grayBtn: #848484;
-$grayDark:  #292933;
+$grayDark: #292933;
+$grayDark2: #242D34;
+$graySliderDots: #D6D6D6;
+$greenSliderDotsActive: #3CD679;

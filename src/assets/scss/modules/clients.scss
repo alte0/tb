@@ -1,0 +1,131 @@
+.clients {
+  padding-top: 75px;
+  padding-bottom: 114px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    background-image: url('../img/bg-clients.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 613px;
+    height: 618px;
+    transform: translateX(24.4%);
+  }
+
+  &__container {
+    @media screen and (min-width: $desktopWidth) {
+      display: flex;
+    }
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+  }
+  // &__left {}
+  &__right {
+    padding-left: 16px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 31px;
+    padding-top: 133px;
+    position: relative;
+    margin-bottom: 28px;
+    z-index: 0;
+
+    &::before {
+      content: '';
+      background-image: url('../img/10-year.svg');
+      background-repeat: no-repeat;
+      // background-position: -22px 0;
+      background-position: 0 0;
+      position: absolute;
+      top: 0;
+      left: -22px;
+      height: 111px;
+      width: 474px;
+      z-index: 1;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -16px;
+    max-width: 549px;
+  }
+
+  &__list-item {
+    line-height: 0;
+    transition: opacity .3s linear;
+  }
+
+  &__list-item:not(:hover) {
+    opacity: .5;
+    transition: opacity .3s linear;
+  }
+
+
+  &__slider-slide {
+    padding-bottom: 72px;
+  }
+  &__slider-img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: -72px;
+  }
+
+  &__slider-pagination {
+    & .swiper-pagination-bullet {
+      opacity: 1;
+      background-color: $graySliderDots;
+    }
+
+    & .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      background-color: $greenSliderDotsActive;
+    }
+  }
+
+  &__slider-button-prev,
+  &__slider-button-next {
+    border: none;
+    background-color: $white;
+    border-radius: 50%;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    top: 38.5%;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &__slider-button-prev {
+    transform: rotate(180deg);
+    left: 5px;
+  }
+
+  &__slider-button-next{
+    right: 5px;
+  }
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 59px;
+  left: 7px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+  margin-right: 15px;
+}

@@ -1,14 +1,6 @@
 .menu-list {
   @include clean-ul;
 
-  &__item {
-    margin-right: 30px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
   &__link {
     color: $grayMenu;
     font-size: 12px;
