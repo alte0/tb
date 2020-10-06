@@ -7,6 +7,8 @@ const BeautifyHtmlWebpackPlugin = require('beautify-html-webpack-plugin')
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin')
 // const SpritesmithPlugin = require('webpack-spritesmith')
 const WebpackHtmlValidatePlugin = require('webpack-html-validate-plugin')
+const ImageminPlugin = require("imagemin-webpack")
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 // Main const
 // see more: /README.md#main-const
@@ -46,8 +48,7 @@ module.exports = {
     }
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.pug$/,
         loader: 'pug-loader'
       },
@@ -56,20 +57,20 @@ module.exports = {
         loader: 'babel-loader',
         exclude: '/node_modules/'
       },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]'
-        }
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]'
-        }
-      },
+      // {
+      //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: '[name].[ext]'
+      //   }
+      // },
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: '[name].[ext]'
+      //   }
+      // },
       {
         test: /\.scss$/,
         use: [
@@ -108,7 +109,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.png$/,
+        // test: /\.png$/,
+        test: /sprites-png(\/|\\).+\.png$/,
         use: [
           'file-loader?name=i/[hash].[ext]'
         ]
@@ -122,20 +124,29 @@ module.exports = {
     modules: ["node_modules", "spritesmith-generated"]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/style.[hash].css`,
     }),
-    new CopyWebpackPlugin(
-      {
-        patterns: [
-          { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-          { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
-          { from: `${PATHS.src}/static`, to: '' },
-        ]
-      }
-      ),
-      // only until new HtmlWebpackPlugin
-    new SVGSpritemapPlugin(`${PATHS.src}/inline-svg/**/*.svg`),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
+        { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
+        { from: `${PATHS.src}/static`, to: '' },
+      ]
+    }),
+    // only until new HtmlWebpackPlugin
+    new SVGSpritemapPlugin(
+      `${PATHS.src}/inline-svg/**/*.svg`, {
+        output: {
+          svgo: true
+        },
+        sprite: {
+          generate: {
+            title: false
+          }
+        }
+      }),
     // Automatic creation any html pages (Don't forget to RERUN dev server)
     // see more: README.md#create-another-html-files
     // best way to create pages: README.md#third-method-best

@@ -6,9 +6,9 @@
 
   @media screen and (min-width: $smDesktopWidth) {
     background-color: transparent;
-    background-image: url('../img/bg-learn-online.svg');
+    background-image: url('../img/bg-learn-online.png');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 0%;
     padding-top: 137px;
     padding-bottom: 383px;
     margin-bottom: -35px;
@@ -18,7 +18,7 @@
       position: absolute;
       left: 50%;
       bottom: 34%;
-      background-image: url('../img/bg-shadow-book.svg');
+      background-image: url('../img/bg-shadow-book.png');
       background-repeat: no-repeat;
       width: 384px;
       height: 42px;
