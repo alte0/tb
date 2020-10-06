@@ -78,7 +78,7 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
             quality: 80,
             progressive: true
           }],
-          ["pngquant", { quality: [0.6, 0.8] }],
+          ["pngquant", { quality: [0.7] }],
           [
             "svgo",
             {
